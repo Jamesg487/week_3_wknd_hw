@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/main.css') }}">
+    <title>&#9968;&#65039; &#128220; &#9986;&#65039;</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/RPS.png"/>
+</head>
+<body class="body">
+    <aside class="aside-left">
+        <img src="/static/RPS.png" alt="The Gang" sizes="(max-height: 600px) 200px">
+    </aside>
+        <main class="main">
+            {% block content %}{% endblock %}
+            <h3 class="vs-link"><a href="/game" style="text-decoration:none">Vs Computer</a></h3>
+        </main>
+    <aside class="aside-right">
+        <img src="/static/RPS.png" alt="The Gang" sizes="(max-height: 600px) 200px">
+    </aside>
+</body>
+<footer class="footer">
+    <h3 class="rules-link">&#174;RPS Productions -<a href="/rules" style="text-decoration:none" class="rules">Rules</a></h3>
+</footer>
+</html>

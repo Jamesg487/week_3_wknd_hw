@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h2>{{player_1.name}}: chose {{player_1.choice.capitalize()}}</h2>
+ <h2>{{player_2.name}}: chose {{player_2.choice.capitalize()}}</h2>
+     {% if winner == None  %}
+        <h2>It's a draw!</h2>
+     {% else %}
+        <h2>The winner is: {{winner.name}}!</h2>
+     {% endif %}
+{% endblock %}

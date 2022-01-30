@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/game" method="post" class="form">
+    <div>
+        <label for="name">Enter your name here</label>
+        <input type="text" name="name"  class="name" required oninvalid="this.setCustomValidity('Let us know your name')"
+        oninput="setCustomValidity('')">
+    </div>
+    <div>
+        <label for="choice-select">Rock, Paper or Scissors?</label>
+        <select name="options" class="option-select" required oninvalid="this.setCustomValidity('You gotta choose one buddy')"
+        oninput="setCustomValidity('')">
+            <option value="">--Please choose an option--</option>
+            <option value="rock" name="rock">Rock</option>
+            <option value="paper" name="paper">Paper</option>
+            <option value="scissors" name="scissors">Scissors</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Play!" class="play-button">
+    </div>
+</form>
+{% endblock %}
+
